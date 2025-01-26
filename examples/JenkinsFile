@@ -23,14 +23,11 @@ environment {
                 }
             }
         }
-            stage('Test Docker Image') {
+            stage('run Docker Image') {
             steps {
                 script {
-                    // Run tests in the Docker container (optional, depending on your tests)
-                    docker.image("${DOCKER_IMAGE}:${DOCKER_TAG}").inside {
-                        sh 'echo "Running tests inside container"'
-                        // Add your test commands here
-                    }
+                 sh  'docker run -p 3000:3000 $DOCKER_IMAGE:$DOCKER_TAG'
+                
                 }
            }
             }
