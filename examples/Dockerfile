@@ -1,10 +1,8 @@
 FROM node
 WORKDIR /app
 
-COPY package*.json ./
+RUN npm install
 COPY . .
 EXPOSE 3000
-RUN npm install
-ENTRYPOINT start npm
 
-##CMD ["node", "index.js"]
+CMD ["node", "index.js"]
