@@ -12,7 +12,7 @@ environment {
             steps {
                 script {
                     // Build the Docker image
-                    docker.build("${DOCKER_IMAGE}:${DOCKER_TAG}") -f examples/first-docker-file/Dockerfile
+                    docker.build("${DOCKER_IMAGE}:${DOCKER_TAG}")
                 }
             }
         }
