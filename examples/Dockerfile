@@ -1,6 +1,6 @@
 FROM node:14
 WORKDIR /app
-COPY /index.js .
+COPY ./index.js .
 RUN npm init -y
 RUN npm install
 
